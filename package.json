@@ -35,6 +35,5 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "spectre.css": "^0.5.8"
-  },
-  "proxy": "http://localhost:3000"
+  }
 }
