@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 class Signup extends Component {
@@ -8,6 +9,7 @@ class Signup extends Component {
 			username: '',
 			password: '',
 			confirmPassword: '',
+			redirectTo: null
 
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)

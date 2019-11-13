@@ -26,13 +26,14 @@ class LoginForm extends Component {
         console.log('handleSubmit')
 
         axios
-            .post('/user/', {
+            .post('/user/login', {
                 username: this.state.username,
                 password: this.state.password
             })
             .then(response => {
                 console.log('login response: ')
                 console.log(response)
+                console.log(response.status);
                 if (response.status === 200) {
                     // update App.js state
                     this.props.updateUser({

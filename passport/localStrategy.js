@@ -1,4 +1,4 @@
-const db = require('../models/user')
+const User = require('../models/user')
 const LocalStrategy = require('passport-local').Strategy
 
 const strategy = new LocalStrategy(
@@ -6,7 +6,7 @@ const strategy = new LocalStrategy(
         usernameField: 'username' // not necessary, DEFAULT
     },
     function (username, password, done) {
-        db.User.findOne({ username: username }, (err, user) => {
+        User.findOne({ username: username }, (err, user) => {
             if (err) {
                 return done(err)
             }
